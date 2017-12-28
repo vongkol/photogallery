@@ -1,0 +1,56 @@
+/* here you can put your own css to customize and override the theme */
+.akp-en-logo {
+	padding-top: 0;
+	padding-bottom: 20px;
+	margin-left: -13px;
+}
+.header-navigation ul > li.active > a, .header-navigation ul > li > a:hover, .header-navigation ul > li > a:focus, .header-navigation ul > li.open > a, .header-navigation ul > li.open > a:hover, .header-navigation ul > li.open > a:focus {
+    color: #fff;
+    background: #DC1000;
+    }
+.b-container {
+	border-left: 7px solid #C5C8CE;
+	border-right: 7px solid #C5C8CE;
+}
+.list-inline {
+    margin-left: -65px;
+}
+.header-top-co {
+	margin-left: -4px;
+}
+.contain-b{
+	padding: 10px;
+}
+body {
+	background-color: #292900;
+}
+
+.b-container {
+	background: #fff;
+}
+.bordertop {
+	border-top: 8px solid #292900;
+}
+.container {
+	width: 984px;
+}
+.slideshow {
+	margin-top: -38px;
+}
+.footer {
+	padding: 30px;
+	background: #252525;
+	color: #fff;
+}
+.col-g {
+	padding: 0;
+}
+.padding-none {
+	padding: 2px;
+}
+.content-page {
+	padding: 5px 2px;
+}
+.vdoo-width {
+	height: 90px;
+}
