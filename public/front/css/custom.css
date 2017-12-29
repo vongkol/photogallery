@@ -52,6 +52,8 @@ body {
 	padding: 5px 2px;
 }
 .vdoo-width {
-	height: 120px;
-	padding: 0 17x;
+	height: 110px;
+}
+.max-height {
+	max-height: 100px;
 }
