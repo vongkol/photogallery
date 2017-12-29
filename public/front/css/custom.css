@@ -13,7 +13,7 @@
 	border-right: 7px solid #C5C8CE;
 }
 .list-inline {
-    margin-left: -65px;
+    margin-left: -110px;
 }
 .header-top-co {
 	margin-left: -4px;
@@ -52,5 +52,7 @@ body {
 	padding: 5px 2px;
 }
 .vdoo-width {
-	height: 90px;
+	height: 120px;
+	padding: 0 17x;
+	line-height: 90px;
 }

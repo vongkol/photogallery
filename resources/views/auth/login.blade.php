@@ -8,13 +8,6 @@
     <title>User Login</title>
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <style>
-        body {
-            background: url("{{asset('img/bg.png')}}") no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
         .box{
             position: absolute;
             top: 18%;

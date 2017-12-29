@@ -10,17 +10,17 @@
             <div class="col-md-4 col-sm-4 vdoo-width">
                 <div class="content-page">
                     <div class="col-md-6">
-                        <img src="{{asset('uploads/gallerys/'.$gal->gallery)}}" alt="gallery" width="100%">
+                        <img src="{{asset('uploads/gallerys/'.$gal->category_id.'/'.$gal->gallery)}}" alt="gallery" height="100%" class="img-thumbnail">
                     </div>
                     <div class="col-md-6 col-g">
-                        {{$gal->gallery}}
+                        {{$gal->description}}
                     </div>
                 </div>
             </div>
         @endforeach
     </div>
-    <div class="col-md-12 col-sm-12">
-        <nav>
+    <div class="col-md-12 col-sm-12"><br><br>
+        <nav class="text-center"> 
             {{$gallerys->links()}}
         </nav>
     </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Session;
+use DB;
 class HomeController extends Controller
 {
     /**
@@ -27,6 +28,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $data["categories"] = DB::table('categories')
+        ->where('active',1)
+        ->get();
+
+        $data["gallerys"] = DB::table('gallerys')
+        ->join('categories', 'categories.id', '=', 'gallerys.category_id')
+        ->where('gallerys.active',1)
+        ->paginate(25);
+        return view('upload_gallerys.index', $data);
     }
 }

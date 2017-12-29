@@ -5,7 +5,7 @@
     width: 100%;
 }
 .tbl thead tr th{
-    padding: 6px 8px;
+    padding: 5px;
     border-bottom: 1px solid #CCCCCC;
     border-right: 1px solid #CCCCCC;
     background: #ebeff1;

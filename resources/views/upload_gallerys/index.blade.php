@@ -44,7 +44,7 @@
                                 $pagex = @$_GET['page'];
                                 if(!$pagex)
                                     $pagex = 1;
-                                $i = 12 * ($pagex - 1) + 1;
+                                $i = 25 * ($pagex - 1) + 1;
                             ?>
                             @foreach($gallerys as $gal)
                                 <tr>

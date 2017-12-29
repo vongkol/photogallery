@@ -34,8 +34,8 @@
                 </div>
                 <!-- END TOP BAR LEFT PART -->
                 <!-- BEGIN TOP BAR MENU -->
-                <div class="col-md-3 col-sm-3 additional-nav">
-                    <ul class="list-unstyled list-inline">
+                <div class="col-md-3 col-sm-3 additional-nav input-group">
+                    <ul class="list-unstyled list-inline input-group">
                         <li><input type="text" name="search"> <input type="button" name="btn_search" value="Search"></li>
                     </ul>
                 </div>

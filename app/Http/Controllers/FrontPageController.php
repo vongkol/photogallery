@@ -23,9 +23,10 @@ class FrontPageController extends Controller
         ->get();
 
         $data["gallerys"] = DB::table('gallerys')
-        ->where('category_id', '=', $r->id)
-        ->where('active',1)
-        ->paginate(100);
+        ->where('category_id', $r->id)
+        ->where('gallerys.active',1)
+        ->paginate(27);
+        
         return view('.fronts.pages.list-gallery',$data);
     }
 }

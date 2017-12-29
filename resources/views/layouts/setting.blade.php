@@ -32,22 +32,16 @@
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('/home')}}">{{trans('labels.home')}}</a>
-            </li>
             <li class="nav-item active">
-                <a class="nav-link" href="{{url('/setting')}}">{{trans('labels.administration')}} <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">{{trans('labels.help')}}</a>
+                <a class="nav-link" href="{{url('/upload-gallery')}}">{{trans('labels.administration')}} <span class="sr-only">(current)</span></a>
             </li>
         </ul>
         <ul class="navbar-nav">
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a href="#" class="nav-link" onclick="chLang(event,'km')">
                     <img src="{{asset('img/khmer.png')}}" alt="" width="35" style="border:1px solid #ababab"> ខ្មែរ
                 </a>
-            </li>
+            </li> -->
             <li class="nav-item">
                 <a href="#" class="nav-link" onclick="chLang(event,'en')">
                     <img src="{{asset('img/english.png')}}" alt="" width="35" style="border:1px solid #ababab"> English
