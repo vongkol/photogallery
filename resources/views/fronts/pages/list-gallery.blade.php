@@ -12,7 +12,7 @@
                     <div class="col-md-6">
                         <img src="{{asset('uploads/gallerys/'.$gal->category_id.'/'.$gal->gallery)}}" alt="gallery" height="100%" class="img-thumbnail">
                     </div>
-                    <div class="col-md-6 col-g">
+                    <div class="col-md-6 col-g vdoo-width">
                         {{$gal->description}}
                     </div>
                 </div>
