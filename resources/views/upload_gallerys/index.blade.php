@@ -49,7 +49,7 @@
                             @foreach($gallerys as $gal)
                                 <tr>
                                     <td>{{$i++}}</td>
-                                    <td><img src="{{asset('uploads/gallerys/'.$gal->gallery)}}" alt="gallery" width="72" id="preview"></td>
+                                    <td><img src="{{asset('uploads/gallerys/'.$gal->category_id.'/'.$gal->gallery)}}" alt="gallery" width="72" id="preview"></td>
                                     <td>{{$gal->description}}</td>
                                     <td>{{$gal->name}}</td>
                                     <td>

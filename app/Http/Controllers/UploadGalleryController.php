@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Session;
 use Auth;
 use DB;
+use File;
 use Intervention\Image\ImageManagerStatic as Image;
 class UploadGalleryController extends Controller
 {
@@ -30,6 +31,7 @@ class UploadGalleryController extends Controller
     {
         $data['categories'] = DB::table('categories')
         ->where('active',1)
+        ->orderBy('name')
         ->get();
         return view("upload_gallerys.create", $data);
     }
@@ -42,20 +44,23 @@ class UploadGalleryController extends Controller
     // insert image
     public function save(Request $r)
     {
+        // category name
         $gallerys=array();
         if($r->file('gallery')){ 
             $files = $r->file('gallery');
             foreach($files as $file){
-                $name=$file->getClientOriginalName();
-                // resize image
-                $image_resize = Image::make($name->getRealPath())->resize(120, 120)->save('uploads/gallerys/resizes'.$name);
-
-                dd($image_resize);
-
-                $description = pathinfo($name, PATHINFO_FILENAME);
-                $destinationPath = 'uploads/gallerys/'; // usually in public folder
                 
-                $file->move($destinationPath, $name);
+                $name=$file->getClientOriginalName();
+                
+                $description = pathinfo($name, PATHINFO_FILENAME);
+                $destinationPath = 'uploads/gallerys/'.$r->category."/"; // usually in public folder
+                // resize
+                $new_img = Image::make($file->getRealPath())->resize(120, null, function($con){
+                    $con->aspectRatio();
+                });
+                $new_img->save($destinationPath.$name, 80);
+
+                //$file->move($destinationPath, $name);
                 $gallerys[]=$name;
 
                 foreach($gallerys as $img) {

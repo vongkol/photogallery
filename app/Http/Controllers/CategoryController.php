@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Session;
 use Auth;
 use DB;
+use File;
 class CategoryController extends Controller
 {
     // index
@@ -57,7 +58,9 @@ class CategoryController extends Controller
         $data = array(
             "name" => $r->name
         );
-        $i = DB::table('categories')->insert($data);
+        $i = DB::table('categories')->insertGetId($data);
+        $path = public_path().'/uploads/gallerys/' . $i;
+        File::makeDirectory($path, $mode = 0777, true, true);
         if($i)
         {
             $r->session()->flash("sms", "New category has been created successfully!");
